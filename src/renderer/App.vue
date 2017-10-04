@@ -13,9 +13,10 @@ export default {
     }
   },
   created () {
-    // this.$.getJSON('https://hplussport.com/api/products')
-    // .done(data => { this.theProducts = data })
-    this.$http.get('https://hplussport.com/api/products').then(response => { this.theProducts = response.body })
+    this.$http.get('https://hplussport.com/api/products')
+      .then(response => {
+        this.theProducts = response.body
+      })
   }
 }
 </script>
